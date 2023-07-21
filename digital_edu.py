@@ -22,13 +22,15 @@ df.info()
 
 def apply_education_status(status):
     if status.find('Student') != -1:
-        return 'Student'
+        return 0
     elif status.find('Alumnus') != -1:
-         return 'Alumnus'
+         return 1
     elif status == 'Undergraduate applicant':
-        return 'Undergraduate applicant'
+        return 2
+    elif status == 'Candidate of Sciences':
+        return 3
     else:
-        return 'Professor'
+        return 4
     
 def apply_langs(langs):
     if 'Русский' in langs.split(';'):
